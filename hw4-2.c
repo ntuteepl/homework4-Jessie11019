@@ -7,7 +7,7 @@ int main(void) {
 
   int n;
   scanf("%d",&n);
-  int atm_input[6][3]={0};
+  int atm_input[n][n];
 
   for (int i = 0; i < n; i++)
   {
