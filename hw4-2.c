@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <assert.h>
 
 int main(void) {
   int atm[6][3] = {{123, 456, 9000}, {456, 789, 5000}, {789, 888, 6000}, {336, 558, 10000}, {775, 666, 12000}, {566, 221, 7000}};
@@ -7,6 +8,7 @@ int main(void) {
 
   int n;
   scanf("%d",&n);
+  assert(n>=1&&n<=6);
 
   for (int a = 0; a < n; a++)
   {
@@ -36,7 +38,7 @@ int main(void) {
 
     }
 
+
     return 0;
 
 }
-
