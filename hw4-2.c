@@ -3,38 +3,45 @@
 #include <assert.h>
 int main(void) {
   int atm[6][3] = {{123, 456, 9000}, {456, 789, 5000}, {789, 888, 6000}, {336, 558, 10000}, {775, 666, 12000}, {566, 221, 7000}};
-  int atm_input[6][3];
+
 
   int n;
   scanf("%d",&n);
-  assert(n>0&&n<7);
+  assert(n>0&&n<=6);
+  int atm_input[6][3]={0};
 
-  for (int a = 0; a < n; a++)
+  for (int i = 0; i < n; i++)
   {
-    scanf("%d %d", &atm_input[a][0],&atm_input[a][1]);
-
+    scanf("%d", &atm_input[i][0]);  
+    scanf("%d", &atm_input[i][1]);
   }
 
     bool ans1 = false;
-    int ans;
-    int i=0;
-    for(i=0;i<n;i++)
+
+
+    for(int i=0;i<n;i++)
     {
-
-      if (atm_input[i][0] == atm[i][0] && atm_input[i][1] == atm[i][1])
+      ans1=false;
+        for(int k=0;k<6;k++)
+        {
+      
+      if (atm[k][0] == atm_input[i][0] )
       {
-        ans = atm[i][2];
-        printf("%d\n", ans);
-        ans1=true;
+        if(atm[k][1] == atm_input[i][1])
+          {
+            printf("%d\n", atm[k][2]);
+            ans1=true;
+            break;
       }
-      else
-      {
-        ans1 = false;
+        
       }
-
+        }
       if(ans1 != true)
+      {
         printf("error\n");
-
+      }
+      
+    
     }
 
 
