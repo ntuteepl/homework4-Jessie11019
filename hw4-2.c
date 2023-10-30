@@ -7,7 +7,6 @@ int main(void) {
 
   int n;
   scanf("%d",&n);
-  assert(n>0&&n<=6);
   int atm_input[6][3]={0};
 
   for (int i = 0; i < n; i++)
