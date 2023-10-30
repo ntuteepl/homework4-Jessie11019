@@ -44,7 +44,7 @@ int main()
     for(i=0;i<c;i++){
       for(j=0;j<c;j++){
         if(i==boy || j==girl){
-          data[i][j]=0;
+          couple[i][j]=0;
         }
       }
     }
